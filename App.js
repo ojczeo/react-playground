@@ -6,8 +6,8 @@ class App extends React.Component {
     super();
     this.state = {
       txt: 'this is the state txt',
-      cat: 0
     }
+    this.update = this.update.bind(this)
  }
  update(e){
    this.setState({txt: e.target.value})
@@ -21,6 +21,16 @@ class App extends React.Component {
     </div>
   );
  }
+}
+
+const Widget = (props) => {
+  return (
+    <div>
+      <input type="text"
+        onChange={props.update} />
+      <h1>{props.txt}</h1>
+    </div>
+  )
 }
 
 ReactDOM.render(
