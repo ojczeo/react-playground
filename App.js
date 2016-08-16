@@ -17,7 +17,7 @@ class Button extends React.Component {
   }
 }
 
-const Heart = () => <span className="glyphicon glypicon-heart"></span>
+const Heart = () => <span className="glyphicon glypicon-heart">&#9825;</span>
 
 class Slider extends React.Component {
   render (){
